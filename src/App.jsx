@@ -16,7 +16,7 @@ function App() {
   const [pastDays, setPastDays] = useState(0)
   const [error, setError] = useState(false)
   const [isInvoke, setInvoke] = useState(false)
-
+  
   const { isLoading, fetchWeather, currentWeather, hourlyWeather, dailyWeather } = useWeatherForecast()
 
   const fetchCoordinates = async (location) => {
@@ -48,15 +48,18 @@ function App() {
     setPastDays(date)
   }
 
-  // let interval;
-  // if (isInvoke) {
-  //   interval = setInterval(() => {
-  //     fetchWeather(coordinates)
-  //     console.log('refetch every 1 min')
-  //   }, 60000)
-  // } else {
-  //   clearInterval(interval)
-  // }
+  useEffect(() => {
+    const minute = 1000 * 60
+    let interval
+    
+    if (isInvoke) {
+      interval = setInterval(() => {
+        fetchWeather(coordinates)
+      }, minute)
+    }
+
+    return () => clearInterval(interval);
+  }, [isInvoke])
 
   return (
     <div className='weatherApp'>
