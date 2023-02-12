@@ -1,0 +1,57 @@
+.dailyWeather {
+    position: relative;
+
+    &__item {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 7px 2px rgb(0 0 0 / 3%);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        padding: 1em;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
+    &__meta {
+        text-align: center;
+        width: 100%;
+
+        span {
+            display: block;
+
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+
+            &:first-child {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 3px;
+            }
+        }
+
+
+        svg {
+            width: 35%;
+        }
+    }
+}
+
+.filterBoxWrap {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 595px) {
+    .dailyWeather {
+    &__meta {
+        span {
+            &:first-child {
+                font-size: 14px;
+            }
+        }
+    }
+    }
+}

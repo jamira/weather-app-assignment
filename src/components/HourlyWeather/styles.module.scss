@@ -1,0 +1,63 @@
+.hourlyWeatherItems {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
+  &__title {
+    display: flex;
+  }
+}
+
+.hourlyWeather {
+  &__item {
+    border-radius: 5px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 7px 2px rgb(0 0 0 / 3%);
+    text-align: center;
+    padding: 0.8em 0;
+
+    span {
+      display: block;
+      font-weight: 300;
+      font-size: 18px;
+    }
+
+    svg {
+      width: 40%;
+      margin: 1em 0;
+    }
+  }
+
+  &__img {
+    margin: 1em 0;
+  }
+
+}
+
+@media only screen and (max-width: 595px) {
+  .hourlyWeatherItems {
+    gap: 0;
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+  }
+
+  .hourlyWeather {
+    &__item {
+      border-radius: 0;
+      box-shadow: none;
+      width: 20%;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+
+      svg {
+        width: 30%;
+        margin: 0.5em 0;
+      }
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}

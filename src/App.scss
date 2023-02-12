@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #111517;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+svg {
+  fill: #009aff;
+  display: inline-block;
+}
+
+.section {
+  padding-bottom: 2em;
+
+  &__title {
+    margin: 1em 0;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(20,29,37,.4);
+  z-index: 9999;
+
+  p {
+    background: #fff;
+    width: 130px;
+    text-align: center;
+    margin: 40vh auto 0;
+    padding: 20px 0;
+    border-radius: 3px;
+    box-shadow: 0 0 20px #333;
+    text-transform: uppercase;
+  }
+}
+
+.noData {
+  font-weight: 600;
+  font-size: 18px;
+  padding: 1em;
+}
+
+
+@media only screen and (max-width: 595px) {
+
+  .section__title {
+    font-size: 16px;
+  }
+  
+  ._filterBox_1f3li_1{
+    font-size: 14px;
+  }
+
+  span {
+    font-size: 15px;
+    
+    &:first-child {
+        font-size: 14px;
+    }
+  }
+}
