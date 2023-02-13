@@ -59,7 +59,7 @@ function App() {
     }
 
     return () => clearInterval(interval);
-  }, [isInvoke])
+  }, [coordinates])
 
   return (
     <div className='weatherApp'>
